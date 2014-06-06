@@ -80,32 +80,32 @@ queryOperation.recordFetchedBlock = fetched
 // Finish fetching the items for the record
 func fetchFinished(cursor: CKQueryCursor?, error: NSError?) {
     
-        if error != nil {
-            println(error)
-        }
-        
-        println("End fetch")
-
-        // Print items array contents
-        println(items)
-
-        // Iterate through the array content ids
-        var ids : CKRecordID[] = []
-        for i in items {
-            ids.append(i.recordID)
-        }
-        
-        // Create the database where you will delete your data from
-        var database: CKDatabase = CKContainer.defaultContainer().privateCloudDatabase
-        
-        // Delete the data from the database using the ids we iterated through
-        var clear: CKModifyRecordsOperation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: ids)
-        database.addOperation(clear)
-    
+    if error != nil {
+       println(error)
     }
+        
+    println("End fetch")
+
+    // Print items array contents
+    println(items)
+
+    // Iterate through the array content ids
+    var ids : CKRecordID[] = []
+    for i in items {
+        ids.append(i.recordID)
+    }
+        
+    // Create the database where you will delete your data from
+    var database: CKDatabase = CKContainer.defaultContainer().privateCloudDatabase
+        
+    // Delete the data from the database using the ids we iterated through
+    var clear: CKModifyRecordsOperation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: ids)
+    database.addOperation(clear)
     
     // Reload the UITableView and retreive the new contents
     tasksTable.reloadData()
+    
+    }
    
     queryOperation.queryCompletionBlock = fetchFinished
     
@@ -129,15 +129,15 @@ override func viewDidLoad() {
     
     // Create an add button that helps you create a new task
     var addButton: UIBarButtonItem = UIBarButtonItem(title: "Add", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("showNewTaskViewController"))
-	// Create a delete button that helps you delete all items in your database for a particular record
-	var deleteButton: UIBarButtonItem = UIBarButtonItem(title: "Delete", style: UIBarButtonItemStyle.Plain, target: self, action:Selector("deleteTasks"))
-    
+    // Create a delete button that helps you delete all items in your database for a particular record
+    var deleteButton: UIBarButtonItem = UIBarButtonItem(title: "Delete", style: UIBarButtonItemStyle.Plain, target: self, action:Selector("deleteTasks"))
+   
     // Set the navigationItem title
     navigationItem.title = "To Do List"
     // Set the add button on the right side of the UINavigationBar
     navigationItem.rightBarButtonItem = addButton
     // Set the delete button on the left side of the UINavigationBar
-	navigationItem.leftBarButtonItem = deleteButton
+    navigationItem.leftBarButtonItem = deleteButton
     
     tasksTable.reloadData()
 }
@@ -194,7 +194,7 @@ override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPa
     // Reload the row using an animation.
     tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Top)
 
-    // TODO: Implement manual 'done'
+    // TODO: Implement done
     
 }
 
