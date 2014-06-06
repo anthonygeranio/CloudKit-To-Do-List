@@ -30,7 +30,7 @@ override func didReceiveMemoryWarning() {
     // Dispose of any resources that can be recreated.
 }
     
-// Create button to add the task
+// Create the button to add the task
 @IBAction func addTaskButtonPressed(sender : AnyObject) {
     
     navigationController.popViewControllerAnimated(true)
