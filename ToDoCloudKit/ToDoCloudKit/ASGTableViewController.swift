@@ -19,6 +19,7 @@ var tasks: NSMutableArray = NSMutableArray()
 // Create a CKRecord for the items in our database we will be retreiving and storing
 var items: CKRecord[] = []
     
+// Function to load all tasks in the UITableView and database
 func loadTasks() {
     
     // Create the query to load the tasks
