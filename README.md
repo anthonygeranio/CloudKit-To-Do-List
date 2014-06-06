@@ -10,6 +10,7 @@ See [Cloud Kit Framework Reference](https://developer.apple.com/library/prerelea
 ## Usage
 1. Go to General and sign your application.
 2. Go to Capabilities and add iCloud + CloudKit to your application.
+3. Make sure that you have an iCloud account active in your simulator.
 
 ----
 ## Quick Reference
