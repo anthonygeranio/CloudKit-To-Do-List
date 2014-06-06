@@ -32,6 +32,6 @@ See [Cloud Kit Framework Reference](https://developer.apple.com/library/prerelea
 ## Contact
 [Twitter](https://twitter.com/asg) - Follow me on Twitter.
 
-License
+## License
 
 [MIT License](http://opensource.org/licenses/MIT) - Fork, modify and use however you want.
