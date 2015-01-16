@@ -12,6 +12,8 @@ See [Cloud Kit Framework Reference](https://developer.apple.com/library/prerelea
 2. Go to Capabilities and add iCloud + CloudKit to your application.
 3. Make sure that you have an iCloud account active in your simulator.
 
+Disclaimer: Please not that this is simply a side project I worked on while at WWDC. Written in around 3 hours after announcement while Swift was still fairly new to everyone. While things might not be perfect, they work and I will update the repo accordingly as I learn more about Swift and CloudKit. 
+
 ----
 ## Quick Reference
 
