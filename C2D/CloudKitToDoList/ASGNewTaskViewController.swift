@@ -45,6 +45,9 @@ class ASGNewTaskViewController: UIViewController, UITableViewDelegate, UITextVie
         // Create done button to add a task
         var doneButton: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("addTask"))
         self.navigationItem.rightBarButtonItem = doneButton
+        
+        self.taskDescriptionTextView.becomeFirstResponder()
+
     }
     
 }
